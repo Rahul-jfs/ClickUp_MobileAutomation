@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumberReporting</td>
+        <td>1</td>
+      <td>05 Sep 2024, 16:03</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userClicksOnCreateButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="1842814450">1.842</td>
+              <td class="duration" data-value="1842814450">2.307</td>
+              <td class="duration" data-value="7371257800">7.371</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userEntersAssignee()</td>
+              <td>4</td>
+              <td class="duration" data-value="4658097475">4.658</td>
+              <td class="duration" data-value="4658097475">4.825</td>
+              <td class="duration" data-value="18632389900">18.632</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userEntersTaskTitleAs(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="10992768625">10.992</td>
+              <td class="duration" data-value="10992768625">11.847</td>
+              <td class="duration" data-value="43971074500">43.971</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userSetsDate()</td>
+              <td>4</td>
+              <td class="duration" data-value="657539700">0.657</td>
+              <td class="duration" data-value="657539700">1.443</td>
+              <td class="duration" data-value="2630158800">2.630</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userSetsDueDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="5038266000">5.038</td>
+              <td class="duration" data-value="5038266000">5.038</td>
+              <td class="duration" data-value="5038266000">5.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.userSetsDueDateAs(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="4771040600">4.771</td>
+              <td class="duration" data-value="4771040600">5.229</td>
+              <td class="duration" data-value="14313121800">14.313</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.AddTaskPageSteps.verifyTaskIsCreated()</td>
+              <td>4</td>
+              <td class="duration" data-value="1710391000">1.710</td>
+              <td class="duration" data-value="1710391000">2.413</td>
+              <td class="duration" data-value="6841564000">6.841</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.FavoritePageSteps.clicksOnTheFavoriteTask(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="974712100">0.974</td>
+              <td class="duration" data-value="974712100">0.974</td>
+              <td class="duration" data-value="974712100">0.974</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.FavoritePageSteps.verifyFavoritePageIsDisplayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="54549800">0.054</td>
+              <td class="duration" data-value="54549800">0.054</td>
+              <td class="duration" data-value="109099600">0.109</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.FavoritePageSteps.verifyFavoriteTaskIsRemoved()</td>
+              <td>1</td>
+              <td class="duration" data-value="120572800">0.120</td>
+              <td class="duration" data-value="120572800">0.120</td>
+              <td class="duration" data-value="120572800">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.clicksOnInviteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="463332400">0.463</td>
+              <td class="duration" data-value="463332400">0.463</td>
+              <td class="duration" data-value="463332400">0.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnInviteOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="1849534800">1.849</td>
+              <td class="duration" data-value="1849534800">1.849</td>
+              <td class="duration" data-value="1849534800">1.849</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnMoreButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1278495350">1.278</td>
+              <td class="duration" data-value="1278495350">1.302</td>
+              <td class="duration" data-value="2556990700">2.556</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnNextButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="864861400">0.864</td>
+              <td class="duration" data-value="864861400">1.120</td>
+              <td class="duration" data-value="3459445600">3.459</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnNotepadOption()</td>
+              <td>2</td>
+              <td class="duration" data-value="1127988800">1.127</td>
+              <td class="duration" data-value="1127988800">1.129</td>
+              <td class="duration" data-value="2255977600">2.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnSeeAllOfFavorite()</td>
+              <td>3</td>
+              <td class="duration" data-value="26310725533">26.310</td>
+              <td class="duration" data-value="26310725533">29.667</td>
+              <td class="duration" data-value="78932176600">1:18.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userClicksOnSeeAllOfMyWork()</td>
+              <td>7</td>
+              <td class="duration" data-value="3582085457">3.582</td>
+              <td class="duration" data-value="3582085457">24.211</td>
+              <td class="duration" data-value="25074598200">25.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.userEntersEmailOfMemberToInvite()</td>
+              <td>1</td>
+              <td class="duration" data-value="65822700">0.065</td>
+              <td class="duration" data-value="65822700">0.065</td>
+              <td class="duration" data-value="65822700">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.user_clicks_on_add_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="1346987750">1.346</td>
+              <td class="duration" data-value="1346987750">2.255</td>
+              <td class="duration" data-value="5387951000">5.387</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.verifyInviteIsSent()</td>
+              <td>1</td>
+              <td class="duration" data-value="381047600">0.381</td>
+              <td class="duration" data-value="381047600">0.381</td>
+              <td class="duration" data-value="381047600">0.381</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.HomePageSteps.verifyInvitePopupIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="151003400">0.151</td>
+              <td class="duration" data-value="151003400">0.151</td>
+              <td class="duration" data-value="151003400">0.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.Hooks.cleanUp()</td>
+              <td>17</td>
+              <td class="duration" data-value="1451589864">1.451</td>
+              <td class="duration" data-value="1451589864">6.822</td>
+              <td class="duration" data-value="24677027700">24.677</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.Hooks.setUp()</td>
+              <td>17</td>
+              <td class="duration" data-value="13862729805">13.862</td>
+              <td class="duration" data-value="13862729805">16.879</td>
+              <td class="duration" data-value="235666406700">3:55.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.LoginSteps.userEntersEmail(java.lang.String)</td>
+              <td>17</td>
+              <td class="duration" data-value="7266445588">7.266</td>
+              <td class="duration" data-value="7266445588">9.564</td>
+              <td class="duration" data-value="123529575000">2:3.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.LoginSteps.user_clicks_on_login_btn()</td>
+              <td>17</td>
+              <td class="duration" data-value="5116500835">5.116</td>
+              <td class="duration" data-value="5116500835">9.143</td>
+              <td class="duration" data-value="86980514200">1:26.980</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.LoginSteps.user_enters_password(java.lang.String)</td>
+              <td>17</td>
+              <td class="duration" data-value="4089214129">4.089</td>
+              <td class="duration" data-value="4089214129">7.171</td>
+              <td class="duration" data-value="69516640200">1:9.516</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.LoginSteps.verify_user_logged_in()</td>
+              <td>17</td>
+              <td class="duration" data-value="14491727835">14.491</td>
+              <td class="duration" data-value="14491727835">22.536</td>
+              <td class="duration" data-value="246359373200">4:6.359</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.clicksOnBackButtonOfMyWorkPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="953456850">0.953</td>
+              <td class="duration" data-value="953456850">0.957</td>
+              <td class="duration" data-value="1906913700">1.906</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.userClicksOnDoneButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="926541600">0.926</td>
+              <td class="duration" data-value="926541600">1.227</td>
+              <td class="duration" data-value="1853083200">1.853</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.userClicksOnOverdueTaskButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="682360900">0.682</td>
+              <td class="duration" data-value="682360900">0.682</td>
+              <td class="duration" data-value="682360900">0.682</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.userClicksOnTheTaskNameAs(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1036472466">1.036</td>
+              <td class="duration" data-value="1036472466">1.375</td>
+              <td class="duration" data-value="6218834800">6.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.userClicksSwipesOnTaskNameAs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2218474300">2.218</td>
+              <td class="duration" data-value="2218474300">2.218</td>
+              <td class="duration" data-value="2218474300">2.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.verifyMyWorkPageIsDisplayed()</td>
+              <td>7</td>
+              <td class="duration" data-value="119029371">0.119</td>
+              <td class="duration" data-value="119029371">0.145</td>
+              <td class="duration" data-value="833205600">0.833</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.verifyNextTasksOfNameDisplayed(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="284761385">0.284</td>
+              <td class="duration" data-value="284761385">0.736</td>
+              <td class="duration" data-value="1993329700">1.993</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.MyWorkPageSteps.verifyTaskIsCompleted()</td>
+              <td>1</td>
+              <td class="duration" data-value="65210000">0.065</td>
+              <td class="duration" data-value="65210000">0.065</td>
+              <td class="duration" data-value="65210000">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.clicksOnConfirmDeleteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1119203900">1.119</td>
+              <td class="duration" data-value="1119203900">1.119</td>
+              <td class="duration" data-value="1119203900">1.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.clicksOnDeleteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="968771000">0.968</td>
+              <td class="duration" data-value="968771000">0.968</td>
+              <td class="duration" data-value="968771000">0.968</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnBackButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="739448100">0.739</td>
+              <td class="duration" data-value="739448100">0.967</td>
+              <td class="duration" data-value="2957792400">2.957</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnCreateNewNoteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="262555800">0.262</td>
+              <td class="duration" data-value="262555800">0.262</td>
+              <td class="duration" data-value="262555800">0.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnEditNoteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="25046562200">25.046</td>
+              <td class="duration" data-value="25046562200">25.046</td>
+              <td class="duration" data-value="25046562200">25.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnNotepadMoreOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="1152413900">1.152</td>
+              <td class="duration" data-value="1152413900">1.152</td>
+              <td class="duration" data-value="1152413900">1.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnTheNoteNameFromTheList(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1201868000">1.201</td>
+              <td class="duration" data-value="1201868000">1.201</td>
+              <td class="duration" data-value="1201868000">1.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userClicksOnTheNoteToBeDeletedOfName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1191289200">1.191</td>
+              <td class="duration" data-value="1191289200">1.191</td>
+              <td class="duration" data-value="1191289200">1.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userCreatesANewNoteNameAs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2848050300">2.848</td>
+              <td class="duration" data-value="2848050300">2.848</td>
+              <td class="duration" data-value="2848050300">2.848</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.userEntersTheNoteMessageAs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="25757917900">25.757</td>
+              <td class="duration" data-value="25757917900">25.757</td>
+              <td class="duration" data-value="25757917900">25.757</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.verifyNoteIsDeletedOfName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39285100">0.039</td>
+              <td class="duration" data-value="39285100">0.039</td>
+              <td class="duration" data-value="39285100">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.verifyNoteIsPresentOfName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="582831200">0.582</td>
+              <td class="duration" data-value="582831200">0.582</td>
+              <td class="duration" data-value="582831200">0.582</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.verifyNoteIsPresentWithNoteNameAndNoteMsg(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5147159100">5.147</td>
+              <td class="duration" data-value="5147159100">5.147</td>
+              <td class="duration" data-value="5147159100">5.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.NotePadPageSteps.verifyNotepadPageIsDisplayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="146789200">0.146</td>
+              <td class="duration" data-value="146789200">0.221</td>
+              <td class="duration" data-value="293578400">0.293</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.clicksOnDeleteButtonOfReminder()</td>
+              <td>1</td>
+              <td class="duration" data-value="938052300">0.938</td>
+              <td class="duration" data-value="938052300">0.938</td>
+              <td class="duration" data-value="938052300">0.938</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.userClicksOnCreateReminderButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="963416900">0.963</td>
+              <td class="duration" data-value="963416900">0.963</td>
+              <td class="duration" data-value="963416900">0.963</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.userClicksOnMoreOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="130636500">0.130</td>
+              <td class="duration" data-value="130636500">0.130</td>
+              <td class="duration" data-value="130636500">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.userClicksOnOverdueOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="608810500">0.608</td>
+              <td class="duration" data-value="608810500">0.608</td>
+              <td class="duration" data-value="608810500">0.608</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.userClicksOnOverdueRemainderOfName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1539218800">1.539</td>
+              <td class="duration" data-value="1539218800">1.539</td>
+              <td class="duration" data-value="1539218800">1.539</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.userClicksOnSeeAllOfReminder()</td>
+              <td>1</td>
+              <td class="duration" data-value="16056237900">16.056</td>
+              <td class="duration" data-value="16056237900">16.056</td>
+              <td class="duration" data-value="16056237900">16.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.user_clicks_on_add_reminder()</td>
+              <td>1</td>
+              <td class="duration" data-value="22542776700">22.542</td>
+              <td class="duration" data-value="22542776700">22.542</td>
+              <td class="duration" data-value="22542776700">22.542</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.user_enters_reminder_name_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="202129900">0.202</td>
+              <td class="duration" data-value="202129900">0.202</td>
+              <td class="duration" data-value="202129900">0.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.verifyListOfOverdueRemaindersAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="1102095000">1.102</td>
+              <td class="duration" data-value="1102095000">1.102</td>
+              <td class="duration" data-value="1102095000">1.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.verifyReminderDetailsPageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="119933200">0.119</td>
+              <td class="duration" data-value="119933200">0.119</td>
+              <td class="duration" data-value="119933200">0.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.verifyReminderIsDeleted()</td>
+              <td>1</td>
+              <td class="duration" data-value="50423100">0.050</td>
+              <td class="duration" data-value="50423100">0.050</td>
+              <td class="duration" data-value="50423100">0.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.verifyReminderPageIsDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="101775300">0.101</td>
+              <td class="duration" data-value="101775300">0.101</td>
+              <td class="duration" data-value="101775300">0.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.ReminderSteps.verify_reminder_is_visible()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnCompleteTaskOption()</td>
+              <td>3</td>
+              <td class="duration" data-value="847097000">0.847</td>
+              <td class="duration" data-value="847097000">0.857</td>
+              <td class="duration" data-value="2541291000">2.541</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnDoneButtonOfOptionsPopup()</td>
+              <td>3</td>
+              <td class="duration" data-value="859638233">0.859</td>
+              <td class="duration" data-value="859638233">0.954</td>
+              <td class="duration" data-value="2578914700">2.578</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnFavoriteOption()</td>
+              <td>2</td>
+              <td class="duration" data-value="647297700">0.647</td>
+              <td class="duration" data-value="647297700">0.653</td>
+              <td class="duration" data-value="1294595400">1.294</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnInProgressTaskOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="848778000">0.848</td>
+              <td class="duration" data-value="848778000">0.848</td>
+              <td class="duration" data-value="848778000">0.848</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnOptionsButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="929606666">0.929</td>
+              <td class="duration" data-value="929606666">1.264</td>
+              <td class="duration" data-value="2788820000">2.788</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnTaskStatusType()</td>
+              <td>4</td>
+              <td class="duration" data-value="871472400">0.871</td>
+              <td class="duration" data-value="871472400">0.879</td>
+              <td class="duration" data-value="3485889600">3.485</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.userClicksOnUnFavoriteOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="327915400">0.327</td>
+              <td class="duration" data-value="327915400">0.327</td>
+              <td class="duration" data-value="327915400">0.327</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyOptionsPopupIsDisplayed()</td>
+              <td>3</td>
+              <td class="duration" data-value="210518100">0.210</td>
+              <td class="duration" data-value="210518100">0.401</td>
+              <td class="duration" data-value="631554300">0.631</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyStatusTypesIsDisplayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="121924900">0.121</td>
+              <td class="duration" data-value="121924900">0.131</td>
+              <td class="duration" data-value="487699600">0.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyTaskIsMarkedAsComplete()</td>
+              <td>3</td>
+              <td class="duration" data-value="60253733">0.060</td>
+              <td class="duration" data-value="60253733">0.066</td>
+              <td class="duration" data-value="180761200">0.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyTaskIsMarkedAsInProgress()</td>
+              <td>1</td>
+              <td class="duration" data-value="67571300">0.067</td>
+              <td class="duration" data-value="67571300">0.067</td>
+              <td class="duration" data-value="67571300">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyTheOptionIsChangedToFavorite()</td>
+              <td>1</td>
+              <td class="duration" data-value="189973900">0.189</td>
+              <td class="duration" data-value="189973900">0.189</td>
+              <td class="duration" data-value="189973900">0.189</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyTheOptionIsChangedToUnFavorite()</td>
+              <td>2</td>
+              <td class="duration" data-value="199835050">0.199</td>
+              <td class="duration" data-value="199835050">0.221</td>
+              <td class="duration" data-value="399670100">0.399</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.TaskPageSteps.verifyUserIsOnTaskDescriptionPage()</td>
+              <td>7</td>
+              <td class="duration" data-value="212723471">0.212</td>
+              <td class="duration" data-value="212723471">0.381</td>
+              <td class="duration" data-value="1489064300">1.489</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.searchSteps.user_clicks_on_search_icon()</td>
+              <td>1</td>
+              <td class="duration" data-value="1513736400">1.513</td>
+              <td class="duration" data-value="1513736400">1.513</td>
+              <td class="duration" data-value="1513736400">1.513</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.searchSteps.user_enters_task_name_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2328282200">2.328</td>
+              <td class="duration" data-value="2328282200">2.328</td>
+              <td class="duration" data-value="2328282200">2.328</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.searchSteps.user_is_on_home_page()</td>
+              <td>14</td>
+              <td class="duration" data-value="95907">0.000</td>
+              <td class="duration" data-value="95907">0.000</td>
+              <td class="duration" data-value="1342700">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.automation.steps.searchSteps.verify_task_is_visible()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>80</td>
+            <td>270</td>
+            <td class="duration">4.285</td>
+            <td class="duration">4:6.359</td>
+            <td class="duration">19:17.161</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
